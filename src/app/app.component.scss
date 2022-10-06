@@ -3,18 +3,51 @@ h1 {
 }
 
 #transition {
+  text-align: center;
+  h2 {
+    text-align: left;
+  }
   .btn {
-    color: white;
-    background-color: crimson;
+    color: black;
+    background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
     transform: scale(1);
-    transition: transform 0.2s, background-color 10s;
+    // transition: all .45s;
+    // transition-delay: 0, .15s, .15s;
+    transition: transform .45s, background-color .3s .15s, color .3s .15s;
+    border: 1px solid crimson;
+    text-transform: uppercase;
     &:hover {
-      background-color: blue;
+      background-color: crimson;
+      color: white;
       transform: scale(1.15);
+    }
+  }
+}
+
+#timing {
+  margin-top: 1em;
+  h2 {
+    text-align: left;
+  }
+  .div-box {
+    border: 1px solid black;
+    padding: 5px;
+    width: 98vw;
+    .box {
+      width: 25px;
+      height: 25px;
+      background-color: grey;
+      // transition-timing-function: linear;
+      transition: transform 1s ease-in-out;
+    }
+    &:hover {
+      .box {
+        transform: translateX(calc(98vw - 25px));
+      }
     }
   }
 }

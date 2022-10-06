@@ -1,0 +1,20 @@
+h1 {
+  text-align: center; 
+}
+
+#transition {
+  .btn {
+    color: white;
+    background-color: crimson;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 0.2s, background-color 10s;
+    &:hover {
+      background-color: blue;
+      transform: scale(1.15);
+    }
+  }
+}

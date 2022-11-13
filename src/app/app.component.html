@@ -3,8 +3,9 @@
 <div id="transition">
   <h2>Transition</h2>
 
-  <a class="btn" href="https://gauthier-clement.fr" target="_blank">Clément Gauthier</a>
-
+  <a class="btn" href="https://gauthier-clement.fr" target="_blank"
+    >Clément Gauthier</a
+  >
 </div>
 
 <div id="timing">
@@ -14,11 +15,14 @@
     <div class="box"></div>
   </div>
 
-  <div>
-    <div>
-      <div></div>
+  <div id="rythm">
+    <div class="jauge">
+      <div
+        class="ball"
+        [ngClass]="pressButtonRythm ? 'press' : 'unpress'"
+      ></div>
     </div>
-    <span>Press me!</span>
+    <div></div>
+    <div class="button" (click)="buttonRythm()">Press me!</div>
   </div>
-
 </div>
